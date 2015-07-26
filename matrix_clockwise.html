@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>matrix_clockwise<\title></title>
+			<script>
+				function matrixClockwise(matrix){
+					var matrixAux=matrix;
+					var r=0;
+					
+					for(r=1;r<4;r++){					
+						if(r<2){
+							for(i=0;i<matrix.length;i++){
+								for(j=0;j<matrix.length;j++){
+									document.write(i+""+j+"("+matrix[i][j]+") ");
+								} document.write("<br>");
+							} document.write(r+" iteration<br>"); r++;
+						}
+					
+					}
+				}
+			
+			</script>
+	</head>
+			<body>
+			<script>
+				var matrix = [[1,2],[3,4]];
+				matrixClockwise(matrix);
+			</script>
+			</body>
+</html>

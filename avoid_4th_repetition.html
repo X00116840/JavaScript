@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>No4thRepetition</title>
+		<script>
+		
+		function charCount(word){
+		
+			var qt = word.length;
+			//var temp_word= new Array(qt);
+			var new_word="";
+			var repeated=0;
+												
+			for(i=0;i<qt;i++){
+				//verify how many repetitions are there
+				if(word.substring(i,(i+1))==word.substring((i+1),(i+2))){repeated++;}else{repeated=0;}					
+				//in case of 3 or more do not consider
+				if(repeated>=3){new_word = new_word+"";}else{new_word = new_word+word.substring(i,(i+1));}			
+		}				
+				document.write("Given word = "+word+" > New word = "+new_word+"<br>");
+			
+		}	
+	
+		</script>
+	</head>
+	<body>
+		<script>
+			var word1 = "aaabbcccc";charCount(word1);
+			var word2 = "aaaaabbbbbbcccccc";charCount(word2);
+			var word3 = "aaabbbccc";charCount(word3);
+			var word4 = "abcccccccccccccccc";charCount(word4);			
+		</script>
+	</body>
+</html>
